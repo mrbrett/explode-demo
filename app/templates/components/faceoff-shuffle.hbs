@@ -1,0 +1,13 @@
+<section id="about">
+  <h2 class="title">FACEOFF SHUFFLE!</h2>
+
+
+  <button {{action "shuffle"}}>Shuffle</button>
+  {{#liquid-bind photos as |photosVersion|}}
+    {{#each photosVersion key="id" as |photo|}}
+      <div class="about-image">
+        <img data-photo-id={{photo.id}} src={{{photo.url}}}>
+      </div>
+    {{/each}}
+  {{/liquid-bind}}
+</section>

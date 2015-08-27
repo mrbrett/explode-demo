@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('home', {path: '/'});
   this.route('users');
   this.route('about');
+  this.route('faceoff');
 });
 
 export default Router;
