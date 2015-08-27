@@ -1,0 +1,29 @@
+<section id="users-chart">
+  <h2>Users</h2>
+  {{#if usersDetail}}
+    <button {{action "toggleUserDetail"}}>Display Detail?</button>
+  {{else}}
+    <button {{action "toggleUserDetail"}}>Hide Detail?</button>
+  {{/if}}
+  {{#liquid-unless usersDetail}}
+      {{#each users key="id" as |user|}}
+        <div class="user-image">
+          <img data-user-id={{user.id}} src={{{user.url}}}>
+          <h4 class="user-name">{{user.title}}</h4>
+        </div>
+        <div class="detail-container hidden">
+          <p class="user-desc-detail">{{user.desc}}</p>
+        </div>
+      {{/each}}
+  {{else}}
+      {{#each users key="id" as |user|}}
+        <div class="user-image">
+          <img data-user-id={{user.id}} src={{{user.url}}}>
+        </div>
+        <div class="detail-container">
+          <h4 class="user-name-detail">{{user.title}}</h4>
+          <p class="user-desc-detail">{{user.desc}}</p>
+        </div>
+      {{/each}}
+  {{/liquid-unless}}
+</section>
