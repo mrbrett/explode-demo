@@ -1,65 +1,157 @@
+$color_black: #1F1F1F
+$color_green: #40B075
+
+html
+	height: 100%
+	width: 100%
+
+*,
+*:before,
+*:after
+  box-sizing: border-box
+
+
+body
+	height: 100%
+	margin: 0
+	padding: 0
+	background-color: white
+	color: $color_green
+	font-family: 'Work Sans', sans-serif
+	font-size: 18px
+	font-style: normal
+	font-weight: 400
+	line-height: 1.5
+	overflow-x: hidden
+  overflow-y: auto
+	> .ember-view
+		height: 100%
+
+h1, h2, h3, h4
+	font-weight: 400
+
+h3
+	font-size: 2rem
+	line-height: 1.4
+
+h4
+	font-size: 1.3rem
+
+.logo
+	position: fixed
+	top: 50px
+	left: 40px
+
+.ember-body
+	margin: 15px
+	margin-bottom: 15px
+	padding: 20px
+	-moz-box-sizing: border-box
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+	overflow: auto
+	background: #EDEEF0
+	border: 1px solid white
+	position: relative
+	height: 100%
+
+.wrap
+	margin-left: 30%
+	padding-bottom: 30px
+
+.liquid-container
+	margin-top: 30px
+
 #basic-nav
 	position: fixed
-	height: 40px
-	top: 0
-	right: 0
+	bottom: 0
 	left: 0
-	background: gray
-	border-bottom: 2px solid black
-	opacity: .9
-	padding-top: 20px
-	padding-left: 50px
+	margin: 55px
+	margin-right: 0px
+	text-align: left
 	z-index: 10000
 	a
-		opacity: 1
-		width: 100px
-		padding: 5px
+		display: block
+		position: relative
+		line-height: 45px
 		text-decoration: none
-		color: black
-		margin-right: 50px
+		color: $color_green
+		margin: 0
+		-webkit-font-smoothing: antialiased
 		&:hover
-			text-decoration: underline
-			color: white
+			text-decoration: none
+
 	a.active
-		&:before
-			content: "☞"
-			font-size: 2em
-			position: absolute
-			margin-left: -36px
-			top: 6px
+		// &:before
+		// 	content: "☞"
+		// 	font-size: 2em
+		// 	position: absolute
+		// 	margin-left: -45px
+		// 	top: -5px
 		&:after
 			content: "☜"
 			font-size: 2em
 			position: absolute
-			top: 6px
-			margin-left: 5px
+			top: 5px
+			right: -45px
 		&:hover
 			&:after, &:before
-				color: white
+				color: $color_green
+
+button, .button
+  font-weight: 400
+  font-family: inherit
+  font-size: inherit
+  text-align: center
+  color: #FFF
+  background-color: $color_green
+  vertical-align: middle
+  text-transform: capitalize
+  user-select: none
+  white-space: nowrap
+  overflow: hidden
+  padding: 0 18px
+  cursor: pointer
+  margin-right: 18px
+  border: 0 none
+  border-radius: 3px
+  display: inline-block
+  height: 32px
+  line-height: 32px
+  -webkit-user-select: none
+  -ms-user-select: none
+
+  &:hover
+    background-color: lighten($color_green, 10%)
+
+
+
 
 .user-wrap
 	&.user-nondetail
 
 .user-image
 	display: inline-block
-	width: 10%
-	height: 150px
-	padding: 30px 20px	
+	width: 24%
+	height: 170px
+	padding: 30px 20px
 	.user-name
-		text-align: center
+		text-align: left
+		font-size: 0.8rem
 	img
-		width: auto	
+		width: auto
 		height: 100%
 
-.detail-container	
-	width: 85%
+.detail-container
+	width: 75%
 	display: inline-block
 
-.ember-body
-	padding-top: 50px
+.user-desc-detail
+	font-size: 0.8rem
+
 
 .about-image
-	width: 10%
+	width: 16.666667%
 	height: 100px
 	padding: 5px
 	display: inline-block
